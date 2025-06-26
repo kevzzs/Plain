@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plane</title>
+    <link rel="stylesheet" href="/Projects/Clothing/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- NAV AND HERO -->
+    <div class="main-wrapper">
+        <nav id="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1><span>₱</span>Lane</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="#navbar" class="nav-link">Home</a>
+                    <a href="#shop" class="nav-link">Shop</a>
+                    <a href="#about" class="nav-link">About</a>
+                </div>
+                <div class="nav-btn">
+                    <a href="https://www.facebook.com/seniorpink2" target="_blank"><button class="btn">Contact</button></a>
+                </div>
+            </div>
+        </nav>
+        
+        <main id="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1><span>₱</span>lain <span>E</span>ssentials</h1>
+                </div>
+                <div class="hero-btn">
+                    <a href="#shop"><button class="btn">Shop Now</button></a>
+                    <img class="arrow" src="/Projects/Clothing/assets/images/arrow.png" alt="arrow">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- SHOP -->
+    <section id="shop">
+        <div class="shop-container">
+            <div class="shop-heading">
+                <h1><span>N</span>ew <span>A</span>rrival</h1>
+            </div>
+            <div class="shop-cards">
+                <img class="cards" src="/Projects/Clothing/assets/images/img1.png" alt="">
+                <img class="cards" src="/Projects/Clothing/assets/images/img2.png" alt="">
+                <img class="cards" src="/Projects/Clothing/assets/images/img3.png" alt="">
+                <img class="cards" src="/Projects/Clothing/assets/images/img4.png" alt="">
+                <img class="cards" src="/Projects/Clothing/assets/images/img5.png" alt="">
+                <img class="cards" src="/Projects/Clothing/assets/images/img6.png" alt="">
+                <img class="cards" src="/Projects/Clothing/assets/images/img7.png" alt="">
+                <img class="cards" src="/Projects/Clothing/assets/images/img8.png" alt="">
+                <img class="cards" src="/Projects/Clothing/assets/images/img9.png" alt="">
+                <img class="cards" src="/Projects/Clothing/assets/images/img10.png" alt="">
+                <img class="cards" src="/Projects/Clothing/assets/images/img11.png" alt="">
+                <img class="cards" src="/Projects/Clothing/assets/images/img12.png" alt="">
+                <img class="cards" src="/Projects/Clothing/assets/images/img13.png" alt="">
+                <img class="cards" src="/Projects/Clothing/assets/images/img14.png" alt="">
+                <img class="cards" src="/Projects/Clothing/assets/images/img15.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Enlarged Photo">
+    </div>
+
+    <!-- ABOUT US -->
+    <section id="about">
+        <div class="about-container">
+            <div class="about-heading">
+                <h1><span>A</span>bout <span>U</span>s</h1>
+            </div>
+            <div class="about-content">
+                <p>
+                    Welcome to <strong>₱lane</strong>, your destination for elevated plain essentials. We offer timeless streetwear designed for comfort, confidence, and clean style. Whether you’re dressing up or chilling out, our minimal designs make the boldest statements.
+                </p>
+                <div class="about-contacts">
+                    <a href="mailto:bryandalida900@gmail.com" class="about-link" target="_blank">
+                        <i class="fas fa-envelope"></i> bryandalida900@gmail.com
+                    </a>
+                    <a href="tel:09516242670" class="about-link" target="_blank">
+                        <i class="fas fa-phone"></i> 0951 624 2670
+                    </a>
+                    <a href="https://www.instagram.com/planecloofficial" target="_blank" class="about-link">
+                        <i class="fab fa-instagram"></i> @planecloofficial
+                    </a>
+                    <a href="https://www.facebook.com/seniorpink2" target="_blank" class="about-link">
+                        <i class="fab fa-facebook"></i> Plane Clothing
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+        <p>&copy; <span id="date" style="color: black;"></span>
+        <span class="footer-logo" style="color: rgb(98, 10, 191);">
+            ₱lane Essentials
+        </span>
+        Built by <a href="" style="color: rgb(98, 10, 191); text-decoration: none;;">Kevin Chan Monterroyo</a> 
+        </p>
+    </footer>
+
+
+    <!-- SCRIPT FOR NAVBAR-->
+    <script defer>
+        const date = document.querySelector("#date")
+        const currentYear = new Date().getFullYear()
+        date.textContent = currentYear
+
+        // Add this after the date script
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const cards = document.querySelectorAll('.cards');
+
+        cards.forEach(card => {
+        card.addEventListener('click', () => {
+            lightboxImg.src = card.src;
+            lightbox.style.display = 'flex';
+        });
+        });
+
+        function closeLightbox() {
+        lightbox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

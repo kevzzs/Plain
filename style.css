@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.main-wrapper {
+    background: url('/Projects/Clothing/assets/images/banner2.jpg') center top/cover no-repeat;
+    height: 100vh;
+}
+
+.arrow {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+span {
+    color: rgb(98, 10, 191);
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+}
+
+#navbar .nav-container {
+    width: 90vw;
+    max-width: 1150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+#navbar .nav-logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+#navbar .nav-links {
+    display: flex;
+    gap: 3rem;
+}
+
+#navbar .nav-links .nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: color 0.2s ease-in-out;
+}
+
+#navbar .nav-links .nav-link:hover {
+    color: rgb(98, 10, 191);
+}
+
+.main-wrapper .btn {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    background-color: rgb(98, 10, 191);
+    border-radius: 5px;
+}
+
+/*
+===================== HERO =======================
+*/
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero .hero-container {
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 90vw;
+    max-width: 1150px;
+    padding-top: 15%;
+}
+
+#hero .hero-text h1 {
+    color: white;
+    font-size: 4.1rem;
+}
+
+#hero .hero-btn {
+    padding-top: 0.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+#hero .hero-btn .arrow {
+    transform: rotate(90deg);
+    animation: point 2s infinite ease-in-out;
+}
+
+@keyframes point {
+    0%, 100% {
+        transform: translateX(0) rotate(90deg);
+    }
+    50% {
+        transform: translateX(20px) rotate(90deg);
+    }    
+}
+
+/*
+===================== SHOP =======================
+*/
+
+#shop {
+    height: calc(100% + 3rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+#shop .shop-container {
+    margin: 0 1rem;
+}
+
+#shop .shop-heading {
+    text-align: center;
+    font-size: 3rem;
+    padding: 3rem 0;
+    text-transform: uppercase;
+}
+
+#shop .shop-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+#shop .cards {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+
+/*
+===================== ABOUT =======================
+*/
+#about {
+    background-color: #000;
+    color: white;
+    padding: 3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.about-container {
+    width: 90vw;
+    max-width: 1150px;
+    text-align: center;
+}
+
+.about-heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.about-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.about-link {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: color 0.3s ease;
+}
+
+.about-link i {
+    font-size: 1.2rem;
+    color: rgb(98, 10, 191);
+}
+
+.about-link:hover {
+    color: rgb(98, 10, 191);
+}
+
+
+
+/*
+===================== FOOTER =======================
+*/
+footer {
+    background-color: rgb(158, 162, 165);
+    text-align: center;
+    padding: 1rem;
+}
+
+
+/*
+===================== ENLARGE PHOTOS =======================
+*/
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+
+
+/*
+===================== TABLET =======================
+*/
+@media (max-width: 1199px) {
+    /* NAVBAR */
+    #navbar .nav-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #navbar .nav-logo h1 {
+        font-size: 2.5rem;
+    }
+
+    #navbar .nav-links {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    /* HERO */
+    #hero .hero-container {
+        display: flex;
+        padding-top: 70%;
+        align-items: center;
+        text-align: center;
+    }
+
+    #hero .hero-text h1 {
+        font-size: 4rem;
+    }
+
+    #hero .hero-btn {
+        text-align: center;
+    }
+
+    .arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* SHOP */
+    #shop .shop-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #shop .cards {
+        height: 40rem;
+    }
+
+    /* ABOUT */
+    .about-heading {
+        font-size: 2.5rem;
+    }
+
+    .about-content p {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .about-contacts {
+        gap: 0.7rem;
+    }
+
+    .about-link {
+        font-size: 1.2rem;
+    }
+
+    /* FOOTER */
+    footer {
+        font-size: 1.1rem;
+    }
+}
+
+/*
+===================== Large Phone =======================
+*/
+@media (max-width: 767px) {
+    /* NAVBAR */
+    #navbar {
+        flex-direction: row;
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    #navbar .nav-container {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    #navbar .nav-links {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    /* HERO */
+    #hero .hero-container {
+        padding-top: 70%;
+        text-align: center;
+        align-items: center;
+    }
+
+    #hero .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .arrow {
+        width: 25px;
+        height: 25px;
+    }
+
+    #hero .hero-btn {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .main-wrapper .btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    /* SHOP */
+    #shop .shop-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #shop .cards {
+        height: 25rem;
+    }
+
+    .shop-heading {
+        font-size: 2rem;
+    }
+
+    /* ABOUT */
+    .about-heading {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+    }
+
+    .about-link {
+        font-size: 0.9rem;
+    }
+
+    /* FOOTER */
+    footer {
+        font-size: 0.85rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 479px) {
+    #navbar .nav-logo h1 {
+        font-size: 1.7rem;
+    }
+
+    #navbar .nav-links .nav-link  {
+        font-size: 1rem;
+    }
+
+    #navbar .btn {
+        padding: 7px 12px;
+    }
+
+    /* SHOP */
+    #shop .shop-container {
+        width: 100%;
+    }
+
+    #shop .shop-heading h1 {
+        font-size: 3rem;
+    }
+
+    #shop .shop-cards {
+        grid-template-columns: 1fr;
+    }
+
+    #shop .cards {
+        height: 20rem;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    /* HERO */
+    #hero .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    /* ABOUT */
+    .about-heading {
+        font-size: 1.6rem;
+    }
+
+    .about-content p {
+        padding: 0 0.5rem;
+    }
+
+    .about-link {
+        font-size: 0.85rem;
+    }
+
+    /* FOOTER */
+    footer {
+        font-size: 0.8rem;
+    }
+}   
